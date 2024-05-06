@@ -1,0 +1,38 @@
+# HTTP Server.
+server:
+  address: ":8000"
+  dumpRouterMap: true
+  routeOverWrite: true
+  accessLogEnabled: true
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+
+# Global logging.
+logger:
+  level: "all"
+  stdout: true
+
+# Database.
+database:
+  logger:
+    level: "all"
+    stdout: true
+
+  default:
+    link: "mysql:root:rd123456@tcp(192.168.150.200:3306)/test"
+    debug: true
+
+# Redis 配置示例
+redis:
+  # 单实例配置示例1
+  default:
+    address: 192.168.150.200:6379
+    db:      1
+
+  # 单实例配置示例2
+#  cache:
+#    address:     192.168.150.200:6379
+#    db:          1
+#    pass:        123456
+#    idleTimeout: 600
+
