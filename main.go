@@ -10,6 +10,7 @@ import (
 	"github.com/gogf/gf-demo-user/v2/internal/cmd"
 )
 
+// 主方法
 func main() {
 	cmd.Main.Run(gctx.New())
 }
